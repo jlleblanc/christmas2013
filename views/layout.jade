@@ -1,0 +1,11 @@
+doctype 5
+html(ng-app="ChristmasApp")
+  head
+    title= title
+    link(rel="stylesheet", type="text/css", href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+    script(type="text/javascript", src="angular-1.0.8/angular.min.js")
+    script(type="text/javascript", src="app.js")
+  body
+      div(class="container")
+        h1= title
+        div(ng-view)
