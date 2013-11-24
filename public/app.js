@@ -57,6 +57,13 @@ var BuyGiftsCtrl = function($scope) {
       buyers: [
         'Dan'
       ]
+    },
+    {
+      name: 'Alicia',
+      description: 'Calendar',
+      buyers: [
+        'Dan'
+      ]
     }
   ];
 
