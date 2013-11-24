@@ -5,6 +5,7 @@ div(ng-hide="personSelected")
       a(ng-click="selectPerson(person)", href="") {{person}}
 div(ng-show="personSelected")
   h3 {{personSelected}}
+  a(ng-click="clearPerson()", href="") Go back
   table(class="table")
     thead
       tr
@@ -20,4 +21,3 @@ div(ng-show="personSelected")
           p
             a(ng-hide="bought(gift.buyers)", ng-click="buy()", href="") Go in on it!
             a(ng-show="bought(gift.buyers)", ng-click="buy()", href="") Second thoughts?
-  a(ng-click="clearPerson()", href="") Go back

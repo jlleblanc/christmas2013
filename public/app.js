@@ -50,25 +50,28 @@ var BuyGiftsCtrl = function($scope) {
     'Alicia'
   ];
 
-  $scope.gifts = [
-    {
-      name: 'Alicia',
-      description: 'Calendar',
-      buyers: [
-        'Dan'
-      ]
-    },
-    {
-      name: 'Alicia',
-      description: 'Calendar',
-      buyers: [
-        'Dan'
-      ]
-    }
-  ];
+  $scope.allGifts = {
+    'Alicia': [
+      {
+        name: 'Alicia',
+        description: 'Calendar',
+        buyers: [
+          'Dan'
+        ]
+      },
+      {
+        name: 'Alicia',
+        description: 'Calendar',
+        buyers: [
+          'Dan'
+        ]
+      }
+    ]
+  };
 
   $scope.selectPerson = function (person) {
     $scope.personSelected = person;
+    $scope.gifts = $scope.allGifts[person];
   };
 
   $scope.clearPerson = function () {
