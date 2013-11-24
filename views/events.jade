@@ -1,1 +1,18 @@
 h2 Events
+table(class="table")
+  thead
+    tr
+      th Suggested By
+      th Event
+      th Vote Up
+      th Votes
+  tbody
+    tr(ng-repeat="event in events")
+      td {{event.suggested}}
+      td {{event.details}}
+      td
+        a(ng-click="voteUp(event.id)", href="") Vote up!
+      td {{event.votes}}
+h3 Suggest an event
+input(ng-model="suggestion", placeholder="What should we do?")
+button(ng-click="suggest()") Suggest

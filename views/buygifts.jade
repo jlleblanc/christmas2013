@@ -1,2 +1,23 @@
 h2 Buy Gifts
-  
+div(ng-hide="personSelected")
+  ul
+    li(ng-repeat="person in people")
+      a(ng-click="selectPerson(person)", href="") {{person}}
+div(ng-show="personSelected")
+  h3 {{personSelected}}
+  table(class="table")
+    thead
+      tr
+        th Name
+        th Description
+        th Buyers
+    tbody
+      tr(ng-repeat="gift in gifts")
+        td {{gift.name}}
+        td {{gift.description}}
+        td
+          p(ng-repeat="buyer in gift.buyers") {{buyer}}
+          p
+            a(ng-hide="bought(gift.buyers)", ng-click="buy()", href="") Go in on it!
+            a(ng-show="bought(gift.buyers)", ng-click="buy()", href="") Second thoughts?
+  a(ng-click="clearPerson()", href="") Go back

@@ -1,1 +1,15 @@
 h2 Your Gifts
+table(class="table")
+  thead
+    tr
+      th Name
+      th Description
+  tbody
+    tr(ng-repeat="gift in requests")
+      td {{gift.name}}
+      td {{gift.description}}
+div
+  h3 Add another gift
+  input(ngModel="newGift.name", placeholder="name...")
+  textarea(ngModel="newGift.description", placeholder="description...")
+  button(ng-click="saveGift()") Add Gift

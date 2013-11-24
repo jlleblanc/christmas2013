@@ -8,19 +8,65 @@ var IndexCtrl = function($scope) {
 };
 
 var PlansCtrl = function ($scope) {
-  
+  $scope.plans = [
+  	{name: "Joe", details: "Going Home"},
+  	{name: "Dan", details: "Staying in"}
+  ];
+
+  $scope.yourPlan = "Something else";
 };
 
 var EventsCtrl = function ($scope) {
-  
+  $scope.events = [
+    {
+      suggested: 'Dan',
+      details: 'Explosions!',
+      id: 2,
+      votes: 4
+    }
+  ];
+
+  $scope.voteUp = function(id) {
+
+  };
+
+  $scope.suggest = function() {
+
+  };
 };
 
-var YourGiftsCtrl = function ($scope ) {
-
+var YourGiftsCtrl = function ($scope) {
+  $scope.requests = [
+    {
+      name: 'Race car',
+      description: 'on amazon.com'
+    }
+  ];
 };
 
 var BuyGiftsCtrl = function($scope) {
+  $scope.people = [
+    'Dan',
+    'Alicia'
+  ];
 
+  $scope.gifts = [
+    {
+      name: 'Alicia',
+      description: 'Calendar',
+      buyers: [
+        'Dan'
+      ]
+    }
+  ];
+
+  $scope.selectPerson = function (person) {
+    $scope.personSelected = person;
+  };
+
+  $scope.clearPerson = function () {
+    $scope.personSelected = false;
+  }
 };
 
 angular.module('ChristmasApp', [])

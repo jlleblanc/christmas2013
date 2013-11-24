@@ -1,1 +1,9 @@
 h2 Plans
+div
+  p(ng-repeat="plan in plans")
+    strong {{plan.name}}: 
+    {{plan.details}}
+div
+  h3 Your Plans
+  textarea(ngModel="yourPlan", rows="5", cols="80") {{yourPlan}}
+button(ng-click="savePlan()") Save
