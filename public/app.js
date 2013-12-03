@@ -4,7 +4,9 @@
 * Description
 */
 var IndexCtrl = function($scope) {
-
+  $scope.login = function () {
+    
+  };
 };
 
 var PlansCtrl = function ($scope) {

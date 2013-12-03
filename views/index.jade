@@ -1,0 +1,5 @@
+h2 Log in
+form(method="post", action="/login")
+  input(ngModel="log.username", name="username", placeholder="username...")
+  input(ngModel="log.password", name="password", placeholder="password...", type="password")
+  button(ng-click="login()") Log in
